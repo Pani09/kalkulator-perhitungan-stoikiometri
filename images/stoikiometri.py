@@ -1,9 +1,7 @@
 import streamlit as st 
-from PIL import Image
-import pandas as pd 
 
 #aplikasi stoikiometri  
-st.image("images/gambarlogo.png")    
+st.image("images/aplikasi stoikiometri.png")    
 with st.sidebar.container():
     st.image("images/gambar1.png", width=250)
     
@@ -11,7 +9,7 @@ page_names = ("APLIKASI PERHITUNGAN STOIKIOMETRI", ['HOME','ABOUT US','CONTACT U
 page = st.sidebar.selectbox ('APLIKASI PERHITUNGAN STOIKIOMETRI',['HOME','PERHITUNGAN STOIKIOMETRI','HUBUNGAN PERSEN B/B DAN B/V','PENGENCERAN DALAM TITRIMETRI','ABOUT US','CONTACT US'])
 
 if (page =='HOME'):
-    st.title (':green[aplikasi perhitungan stoikiometri]')
+    st.title ('aplikasi perhitungan stoikiometri')
     st.markdown ('selamat datang di web kami:wave:')
     st.markdown ('aplikasi ini dapat memudahkan user dalam perhitungan kimia dasar stoikiometri dan pengenceran dalam titrimetri')
     st.write("---")
@@ -24,7 +22,7 @@ if (page =='HOME'):
         st.write ('Syifa Nurfadilah')
         
 if (page =='ABOUT US'):
-    st.title(':green[aplikasi stoikiometri??]')
+    st.title('aplikasi stoikiometri??')
     st.subheader("Hello, to all user :wave:")
     st.write ('''aplikasi stoikiometri merupakan aplikasi yang akan memudahkan user untuk
               menghitung stoikiometri dan membantu untuk perhitungan pada titrasi''')
@@ -44,8 +42,7 @@ if (page =='ABOUT US'):
         
     st.write("---")
     st.header("Our crew")
-    image3 = Image.open ('images/gambar3.png')
-    st.image(image3)
+    st.image('images/gambar3.png')
     
 if (page =='CONTACT US'):
     st.header(":mailbox: Get In Touch With Us!")
@@ -75,7 +72,7 @@ if (page =='PERHITUNGAN STOIKIOMETRI'):
     st.write("---")
     
     if (page == 'PERHITUNGAN MOL'):
-        st.subheader (':blue[perhitungan mol]')
+        st.subheader (':grey[perhitungan mol]')
         massa = st.number_input ("masukan nilai massa")
         bm = st.number_input ("masukan nilai bm")
         hitung = st.button ("hitung mol")
@@ -85,7 +82,7 @@ if (page =='PERHITUNGAN STOIKIOMETRI'):
             st.write ("nilai mol adalah = ", (mol))
 
     if (page =='PERHITUNGAN Vstp'):
-        st.subheader (':blue[perhitungan Vstp]')
+        st.subheader (':grey[perhitungan Vstp]')
         n = st.number_input ("masukan nilai n")
         atm = st.number_input ("masukan nilai atm(diasuksikan bahwa atm=22,4)")
         hitung = st.button ("hitung Vstp")
@@ -95,7 +92,7 @@ if (page =='PERHITUNGAN STOIKIOMETRI'):
             st.write ("nilai Vstp adalah =", (Vstp))
                           
     if (page =='PERHITUNGAN Vrtp'):
-        st.subheader (':blue[perhitungan Vrtp]')
+        st.subheader (':grey[perhitungan Vrtp]')
         n = st.number_input ("masukan nilai n")
         atm = st.number_input ("masukan nilai atm(diasuksikan bahwa atm=22)")
         hitung = st.button ("hitung Vstp")
@@ -105,7 +102,7 @@ if (page =='PERHITUNGAN STOIKIOMETRI'):
             st.write ("nilai Vstp adalah =", (Vstp))
         
     if (page =='PERHITUNGAN MOLARITAS'):
-        st.subheader (':blue[perhitungan molaritas]')
+        st.subheader (':grey[perhitungan molaritas]')
         st.write ('jika berbeda satuan, user bisa mengkonversi satuan terlebih dahulu, jika satuan dalam l silahkan konversi dengan mengkalikan nilai volume sebanyak 1000, jika massa dalam g silahkan konversi dengan mengkalikan nilai massa dengan 1000')
         massa = st.number_input ("masukan nilai massa dalam mg")
         BM = st.number_input ("masukan nilai BM dalam mg/mmol")
@@ -117,7 +114,7 @@ if (page =='PERHITUNGAN STOIKIOMETRI'):
             st.write ("nilai molaritas adalah =",(molaritas))
         
     if (page =='PERHITUNGAN NORMALITAS'):
-        st.subheader (':blue[perhitungan normalitas]')
+        st.subheader (':grey[perhitungan normalitas]')
         st.write ('jika berbeda satuan, user bisa mengkonversi satuan terlebih dahulu, jika satuan dalam l silahkan konversi dengan mengkalikan nilai volume sebanyak 1000, jika massa dalam g silahkan konversi dengan mengkalikan nilai massa dengan 1000')
         massa = st.number_input ("masukan nilai massa dalam mg")
         BE = st.number_input ("masukan nilai BE dalam mg/mgrek (BE didapatkan dari BM dibagi dengan n)")
@@ -161,7 +158,7 @@ if (page =='PENGENCERAN DALAM TITRIMETRI'):
         st.write("---")
         
         if (selected =='perhitungan pengenceran'):
-            st.subheader (':blue[perhitungan pengenceran]')
+            st.subheader (':grey[perhitungan pengenceran]')
             volume1 = st.number_input ('masukan nilai volume1')
             konsentrasi1 = st.number_input ('masukan nilai konsentrasi1')
             st.write ('nilai konsentrasi dapat di ganti dengan normalitas dan molaritas')
@@ -174,7 +171,7 @@ if (page =='PENGENCERAN DALAM TITRIMETRI'):
                 st.write ('nilai pengenceran adalah =',(pengenceran))
                 
         if (selected =='perhitungan normalitas dalam titrimetri'):
-            st.subheader (':blue[perhitungan normalitas]')
+            st.subheader (':grey[perhitungan normalitas]')
             st.write ('jika berbeda satuan, user bisa mengkonversi satuan terlebih dahulu, jika satuan dalam l silahkan konversi dengan mengkalikan nilai volume sebanyak 1000, jika massa dalam g silahkan konversi dengan mengkalikan nilai massa dengan 1000')
             massa = st.number_input ("masukan nilai massa dalam mg")
             BE = st.number_input ("masukan nilai BE dalam mg/mgrek (BE didapatkan dari BM dibagi dengan n)")
@@ -187,7 +184,7 @@ if (page =='PENGENCERAN DALAM TITRIMETRI'):
                 st.write ("nilai normalitas adalah =",(normalitas))
                 
         if (selected =='perhitungan molaritas dalam titrimetri'):
-            st.subheader (':blue[perhitungan molaritas]')
+            st.subheader (':grey[perhitungan molaritas]')
             st.write ('jika berbeda satuan, user bisa mengkonversi satuan terlebih dahulu, jika satuan dalam l silahkan konversi dengan mengkalikan nilai volume sebanyak 1000, jika massa dalam g silahkan konversi dengan mengkalikan nilai massa dengan 1000')
             massa = st.number_input ("masukan nilai massa dalam mg")
             BM = st.number_input ("masukan nilai BM dalam mg/mmol")
@@ -203,7 +200,7 @@ if (page =='PENGENCERAN DALAM TITRIMETRI'):
         page = st.radio ('silahkan pilih titrasi yang ingin dilakukan',['standardisasi HCL','standardisasi NaOH','standardisasi KMnO4','standardisasi TioSulfat','standardisasi EDTA'])
         
         if (page =='standardisasi HCL'):
-            st.subheader (':blue[cara standardisasi HCL]')
+            st.subheader (':grey[cara standardisasi HCL]')
             
             st.write ('''
                   1. setelah menghitung berapa volume pengenceran yang dibuat, lakukan lah pengenceran dengan HCL pekat 
@@ -225,7 +222,7 @@ if (page =='PENGENCERAN DALAM TITRIMETRI'):
                   ''')
         
         if (page =='standardisasi NaOH'):
-            st.subheader (':blue[cara standardisasi NaOH]')
+            st.subheader (':grey[cara standardisasi NaOH]')
             st.write ('''
                   1. setelah menghitung berapa volume pengenceran yang dibuat, lakukan lah pengenceran dengan NaOH pekat 
                   2. masukan volume yang di dapat dari hasil pengenceran kedalam gelas piala atau labu takar
@@ -246,7 +243,7 @@ if (page =='PENGENCERAN DALAM TITRIMETRI'):
                   ''')
         
         if (page =='standardisasi KMnO4'):
-            st.subheader (':blue[cara standardisasi KMnO4]')
+            st.subheader (':grey[cara standardisasi KMnO4]')
             st.write ('''
                   1. setelah menghitung berapa volume pengenceran yang dibuat, lakukan lah pengenceran dengan KMnO4 pekat 
                   2. masukan volume yang di dapat dari hasil pengenceran kedalam gelas piala atau labu takar
@@ -268,7 +265,7 @@ if (page =='PENGENCERAN DALAM TITRIMETRI'):
                   ''')
       
         if (page =='standardisasi TioSulfat'):
-            st.subheader (':blue[cara standardisasi TioSulfat]')
+            st.subheader (':grey[cara standardisasi TioSulfat]')
             st.write ('''
                   1. setelah menghitung berapa volume pengenceran yang dibuat, lakukan lah pengenceran dengan TioSulfat pekat 
                   2. masukan volume yang di dapat dari hasil pengenceran kedalam gelas piala atau labu takar
@@ -289,7 +286,7 @@ if (page =='PENGENCERAN DALAM TITRIMETRI'):
                   ''')
         
         if (page =='standardisasi EDTA'):
-            st.subheader (':blue[cara standardisasi EDTA]')
+            st.subheader (':grey[cara standardisasi EDTA]')
             st.write ('''
                   1. setelah menghitung berapa volume pengenceran yang dibuat, lakukan lah pengenceran dengan EDTA pekat 
                   2. masukan volume yang di dapat dari hasil pengenceran kedalam gelas piala atau labu takar
@@ -313,7 +310,7 @@ if (page =='PENGENCERAN DALAM TITRIMETRI'):
                   ''')
         
     with tab2:
-        st.title (':blue[about titrasi]')
+        st.title ('about titrasi')
         
         st.write ('''
                   analisis titrimetri adalah analisis berdasarkan pengukuran volume larutan yang sudah diketahui konsentrasinya, 
@@ -329,8 +326,7 @@ if (page =='PENGENCERAN DALAM TITRIMETRI'):
                   4. titrasi kompleksometri 
                   ''')
         
-        image5 = Image.open ('images/gambar5.png')
-        st.image (image5)
+        st.image ("images/gambar5.png")
         
         st.write ('''1. titrasi asidimetri dan alkalimetri
                   titrasi asidimetri-alkalimetri ini disebut juga sebagai titrasi asam-basa
